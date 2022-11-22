@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="deep-learning\adept_simple_test.cpp">
+      <Filter>deep-learning</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning\pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="deep-learning">
+      <UniqueIdentifier>{fc9663fe-fbcf-4639-ab12-a4150d61f8de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deep-learning\pch.hpp" />
+  </ItemGroup>
+</Project>

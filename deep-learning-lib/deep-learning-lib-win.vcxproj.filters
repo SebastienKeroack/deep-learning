@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="deep-learning-lib\framework.hpp" />
+    <ClInclude Include="deep-learning-lib\pch.hpp" />
+    <ClInclude Include="deep-learning-lib\session.hpp">
+      <Filter>deep-learning-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\optimizers\sarprop.hpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\optimizers\quickprop.hpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\ops\distributions\distribution.hpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\ops\distributions\bernoulli.hpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\ops\distributions\gaussian.hpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\ops\distributions\real.hpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\learner\models.hpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\enum\loglevel.hpp">
+      <Filter>deep-learning-lib\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\enum\hierarchy.hpp">
+      <Filter>deep-learning-lib\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\dataset.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\group.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\hyperopt.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\initializer.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\layer.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\layer_activation.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\layer_dropout.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\layer_norm.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\loss_fn.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\model.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\optimizer.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\propagation.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\enum\dialogbox.hpp">
+      <Filter>deep-learning-lib\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\enum\env.hpp">
+      <Filter>deep-learning-lib\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\ops\math.hpp">
+      <Filter>deep-learning-lib\ops</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\ops\_math.hpp">
+      <Filter>deep-learning-lib\ops</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\time.hpp">
+      <Filter>deep-learning-lib\data</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\string.hpp">
+      <Filter>deep-learning-lib\data</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\dtypes.hpp">
+      <Filter>deep-learning-lib\data</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\device\system\shutdown_block.hpp">
+      <Filter>deep-learning-lib\device\system</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\device\system\info.hpp">
+      <Filter>deep-learning-lib\device\system</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\device\system\shutdown_block\shutdown_block_nux.hpp">
+      <Filter>deep-learning-lib\device\system\shutdown_block</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\device\system\shutdown_block\shutdown_block_win.hpp">
+      <Filter>deep-learning-lib\device\system\shutdown_block</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\logger.hpp">
+      <Filter>deep-learning-lib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\flags.hpp">
+      <Filter>deep-learning-lib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\file.hpp">
+      <Filter>deep-learning-lib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\term\keyboard_win.hpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\term\keyboard_nux.hpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\term\spinner.hpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\term\input.hpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\form\dialogbox.hpp">
+      <Filter>deep-learning-lib\io\form</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\term\keyboard.hpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\term\command.hpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\ops\distributions\integer.hpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\ops\activations\functions.hpp">
+      <Filter>deep-learning-lib\v1\ops\activations</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\ops\while.hpp">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\scaler.hpp">
+      <Filter>deep-learning-lib\v1\data</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\datasets.hpp">
+      <Filter>deep-learning-lib\v1\data</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\learner\model.hpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\optimizers\grid_search.hpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\dataset.hpp">
+      <Filter>deep-learning-lib\data</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\ops\modwt.hpp">
+      <Filter>deep-learning-lib\ops</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\dataset\mnist.hpp">
+      <Filter>deep-learning-lib\data\dataset</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\drivers\driver.hpp">
+      <Filter>deep-learning-lib\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\data\shape.hpp">
+      <Filter>deep-learning-lib\data</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\nn\learner.hpp">
+      <Filter>deep-learning-lib\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\activation.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\mem\reallocate.hpp">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\mem\reallocate_c.hpp">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\while.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\v1\data\enum\hierarchy.hpp">
+      <Filter>deep-learning-lib\v1\data\enum</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="deep-learning-lib\pch.cpp" />
+    <ClCompile Include="deep-learning-lib\session.cpp">
+      <Filter>deep-learning-lib</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\adabound.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\adam.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\amsbound.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\amsgrad.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\gradient_descent.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\gradient_descent_momentum.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\irprop_plus.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\irprop_minus.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\nesterov_accelerated_gradient.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\sarprop.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\quickprop.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\ops\distributions\distribution.cpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\ops\distributions\bernoulli.cpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\ops\distributions\gaussian.cpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\ops\distributions\real.cpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\zoneout_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\zoneout_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\update_derivative_rec_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\update_derivative_fwp_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\update_derivative_rec_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\update_derivative_fwp_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\transfer_learning.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\user_controls.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\update_size.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\tied_weight.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\tied_norm.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\tied_paramater.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\reallocate_threads.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\reallocate_parameters.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\save.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\reallocate_batch.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\ordering.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\models.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\model.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\load.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\loss.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\indexing.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\fwp_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\fwp_rec_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\fwp_rec_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\fwp_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\deallocate.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\connections_prepare.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\connections_init.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_r_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_r_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_r.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_loss_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_loss_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_loss.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_error_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_error_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_error.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compile.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\bwp_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\bwp_rec_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\bwp_rec_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\bernoulli_st.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\bwp_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\bernoulli_mp.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\assign_inputs.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\allocate.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\copy.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\ops\math.cpp">
+      <Filter>deep-learning-lib\ops</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\data\time\time_win.cpp">
+      <Filter>deep-learning-lib\data\time</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\data\time\time_nux.cpp">
+      <Filter>deep-learning-lib\data\time</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\data\time\time.cpp">
+      <Filter>deep-learning-lib\data\time</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\data\string.cpp">
+      <Filter>deep-learning-lib\data</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\data\dataset\dataset.cpp">
+      <Filter>deep-learning-lib\data\dataset</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\device\system\info\info.cpp">
+      <Filter>deep-learning-lib\device\system\info</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\device\system\info\info_nux.cpp">
+      <Filter>deep-learning-lib\device\system\info</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\device\system\info\info_win.cpp">
+      <Filter>deep-learning-lib\device\system\info</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\device\system\shutdown_block\shutdown_block_nux.cpp">
+      <Filter>deep-learning-lib\device\system\shutdown_block</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\device\system\shutdown_block\shutdown_block_win.cpp">
+      <Filter>deep-learning-lib\device\system\shutdown_block</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\logger.cpp">
+      <Filter>deep-learning-lib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\keyboard_nux.cpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\keyboard_win.cpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\spinner.cpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\input.cpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\command_nux.cpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\command_win.cpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\form\dialogbox.cpp">
+      <Filter>deep-learning-lib\io\form</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\form\dialogbox_nux.cpp">
+      <Filter>deep-learning-lib\io\form</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\form\dialogbox_win.cpp">
+      <Filter>deep-learning-lib\io\form</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\file\file_nux.cpp">
+      <Filter>deep-learning-lib\io\file</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\file\file_win.cpp">
+      <Filter>deep-learning-lib\io\file</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\file\file.cpp">
+      <Filter>deep-learning-lib\io\file</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\flags.cpp">
+      <Filter>deep-learning-lib\io\term</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\ops\distributions\integer.cpp">
+      <Filter>deep-learning-lib\ops\distributions</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\regularizers\weight_decay.cpp">
+      <Filter>deep-learning-lib\v1\ops\regularizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\regularizers\srip.cpp">
+      <Filter>deep-learning-lib\v1\ops\regularizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\regularizers\l2.cpp">
+      <Filter>deep-learning-lib\v1\ops\regularizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\regularizers\l1.cpp">
+      <Filter>deep-learning-lib\v1\ops\regularizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\uniform.cpp">
+      <Filter>deep-learning-lib\v1\ops\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\orthogonal.cpp">
+      <Filter>deep-learning-lib\v1\ops\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\lsuv.cpp">
+      <Filter>deep-learning-lib\v1\ops\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\identity.cpp">
+      <Filter>deep-learning-lib\v1\ops\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\glorot.cpp">
+      <Filter>deep-learning-lib\v1\ops\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\constraints\constraint.cpp">
+      <Filter>deep-learning-lib\v1\ops\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\constraints\clip_gradient.cpp">
+      <Filter>deep-learning-lib\v1\ops\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\constraints\euclidean.cpp">
+      <Filter>deep-learning-lib\v1\ops\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\constraints\max_norm.cpp">
+      <Filter>deep-learning-lib\v1\ops\constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\batch_normalization.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\batch_renormalization.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\train.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\normalization.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\metrics.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\merge.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\k_sparse.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\data\scaler.cpp">
+      <Filter>deep-learning-lib\v1\data</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\cross_val_opt.cpp">
+      <Filter>deep-learning-lib\v1\data\dataset</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\cross_val.cpp">
+      <Filter>deep-learning-lib\v1\data\dataset</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\datasets.cpp">
+      <Filter>deep-learning-lib\v1\data\dataset</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\dataset_v1.cpp">
+      <Filter>deep-learning-lib\v1\data\dataset</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\minibatch.cpp">
+      <Filter>deep-learning-lib\v1\data\dataset</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\nosadam.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\dropout.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\bayesian.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\gaussian_search.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\grid_search.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\optimizers\hyperop.cpp">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\ops\modwt.cpp">
+      <Filter>deep-learning-lib\ops</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\data\dataset\mnist.cpp">
+      <Filter>deep-learning-lib\data\dataset</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\drivers\driver.cpp">
+      <Filter>deep-learning-lib\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\data\shape.cpp">
+      <Filter>deep-learning-lib\data</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\nn\learner.cpp">
+      <Filter>deep-learning-lib\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\mem\reallocate.cpp">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\mem\reallocate_c.cpp">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_grad.cpp">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="deep-learning-lib">
+      <UniqueIdentifier>{12752733-117a-4790-a721-364166de2ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1">
+      <UniqueIdentifier>{40071c91-6162-4dd3-ad2d-8b64e0a852b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\optimizers">
+      <UniqueIdentifier>{a99ea26f-f1f2-488a-bd31-7df62f41634d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\ops">
+      <UniqueIdentifier>{2d0878f3-8fed-46d0-a68d-cd67c4c6bd0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\mem">
+      <UniqueIdentifier>{237b8a29-31c7-4d29-9350-579d2018567c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\io">
+      <UniqueIdentifier>{882b76c5-78a5-4cb3-82aa-e7374c301998}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\device">
+      <UniqueIdentifier>{540cf6dd-7220-4e63-ac89-5ff0c8779c32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\data">
+      <UniqueIdentifier>{33debfe5-7766-4811-bb08-238f3c449eb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\ops\distributions">
+      <UniqueIdentifier>{d39fd161-e314-4765-9b11-9b4dd6f40293}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\ops\activations">
+      <UniqueIdentifier>{427b3c21-7138-4358-adb5-d6149a9ea67c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\ops\constraints">
+      <UniqueIdentifier>{cd75854d-f307-4ebd-b1d4-6f1dcc389677}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\ops\initializers">
+      <UniqueIdentifier>{fa5468d0-51de-4872-a728-572a98b87670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\ops\regularizers">
+      <UniqueIdentifier>{71728ad8-0d28-4c7e-84b0-c1dd6e45cdf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\io\file">
+      <UniqueIdentifier>{1b667a3f-e5f2-493b-a172-89f703309a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\io\form">
+      <UniqueIdentifier>{e8450871-e258-4cc7-9d0c-ade10b8d56cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\io\term">
+      <UniqueIdentifier>{35368f35-c1df-4095-b626-e9d9077867df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\device\gpu">
+      <UniqueIdentifier>{c0150f21-6b2f-4e7b-b3a2-4b9a8d1b72b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\device\system">
+      <UniqueIdentifier>{7a38f2e8-14d0-43d7-b80a-a70f33fde09c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\device\system\info">
+      <UniqueIdentifier>{4f7b22dc-0265-4c88-bb01-3d782aba1927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\device\system\shutdown_block">
+      <UniqueIdentifier>{69d047b7-3417-447b-b4fb-2b12e917201c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\device\gpu\cuda">
+      <UniqueIdentifier>{1c86de79-af02-4221-bc74-f21a1f1febc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\data\dataset">
+      <UniqueIdentifier>{c8c368af-9a6b-463e-be38-e1a6ae894234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\data\enum">
+      <UniqueIdentifier>{8a021d5e-fe9e-474c-892c-61677b4deb9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\data\time">
+      <UniqueIdentifier>{0b81fbde-26fd-43b9-aad1-0dabff5cae5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\data">
+      <UniqueIdentifier>{022d439a-3c2f-4ca7-9f9c-cf104067565c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\device">
+      <UniqueIdentifier>{4b562339-f668-4c3a-90eb-15337b1f2470}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\learner">
+      <UniqueIdentifier>{df1f2598-4576-4ca8-ba7b-73a36bb3538b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\mem">
+      <UniqueIdentifier>{d464e3d7-52b1-4abf-80aa-e15f86078f56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\ops">
+      <UniqueIdentifier>{b40eae40-b254-466b-a0bf-35194e1f774a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\optimizers">
+      <UniqueIdentifier>{a2825155-8448-4bb6-a801-64a5a7314c73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\ops\activations">
+      <UniqueIdentifier>{eb2a3855-30e7-42fa-9c5d-3495115ae506}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\ops\constraints">
+      <UniqueIdentifier>{d3e100f0-bdf3-4df3-8c2e-558958f6af42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\ops\distributions">
+      <UniqueIdentifier>{aa5026be-7659-4ea9-beb8-a72f2cb0f439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\ops\initializers">
+      <UniqueIdentifier>{09f914d2-3ed6-44c3-83f4-ba1d904d8587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\ops\regularizers">
+      <UniqueIdentifier>{1187884a-388a-457f-a1ad-4a25a4f307b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\device\gpu">
+      <UniqueIdentifier>{7e0913ec-5fde-464d-9aa1-0720d711627d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\device\gpu\cuda">
+      <UniqueIdentifier>{2a62bfa7-d97e-4b77-99bb-0b9ddd5ef5c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\data\dataset">
+      <UniqueIdentifier>{db167677-84dd-4cf1-8bb4-4f6dc95e2bb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\v1\data\enum">
+      <UniqueIdentifier>{5c95f62a-e802-4169-a461-3d6b08c2a655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\drivers">
+      <UniqueIdentifier>{d2088454-2272-4cdf-8f5f-e8cac6ca50ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deep-learning-lib\nn">
+      <UniqueIdentifier>{e13e45dc-ccf4-4774-ad0c-4f7d542e0006}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="deep-learning-lib\v1\optimizers\amsgrad.cu">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\gradient_descent.cu">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\gradient_descent_momentum.cu">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\irprop_plus.cu">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\nesterov_accelerated_gradient.cu">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\adam.cu">
+      <Filter>deep-learning-lib\v1\optimizers</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\accumulate.cuh">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\fill.cu">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\index.cu">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\mask.cu">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\mask.cuh">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\math.cuh">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\multiply.cu">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\multiply.cuh">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\reduce.cu">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\reduce.cuh">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\transpose.cu">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\transpose.cuh">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\zero.cu">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\accumulate.cu">
+      <Filter>deep-learning-lib\v1\ops</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\regularizers\l2.cu">
+      <Filter>deep-learning-lib\v1\ops\regularizers</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\regularizers\l1.cu">
+      <Filter>deep-learning-lib\v1\ops\regularizers</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\distributions\curand.cuh">
+      <Filter>deep-learning-lib\v1\ops\distributions</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\distributions\shuffle.cu">
+      <Filter>deep-learning-lib\v1\ops\distributions</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\distributions\shuffle.cuh">
+      <Filter>deep-learning-lib\v1\ops\distributions</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\distributions\curand.cu">
+      <Filter>deep-learning-lib\v1\ops\distributions</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\constraints\max_norm.cu">
+      <Filter>deep-learning-lib\v1\ops\constraints</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\activations\functions.cuh">
+      <Filter>deep-learning-lib\v1\ops\activations</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\reallocate.cu">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\reallocate.cuh">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\reallocate_c.cu">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\reallocate_c.cuh">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\copy.cu">
+      <Filter>deep-learning-lib\v1\mem</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\update_derivative_fc_dropout.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\allocate.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\assign_inputs.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp_fc_to_fc.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp_fc_to_fc_batch_renorm.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp_fc_to_fc_batch_renorm_dropout.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp_fc_to_fc_dropout.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_error.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_error_bce.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_error_bit_fail.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_error_standard.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_loss.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_loss_bce.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_loss_bit_fail.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_loss_standard.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\copy.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\deallocate.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\dropout.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp_fc_to_fc.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp_fc_to_fc_batch_renorm.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp_fc_to_fc_batch_renorm_dropout.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp_fc_to_fc_dropout.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\model.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\model.cuh">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\reallocate.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\train.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\update_derivative.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\update_derivative_fc.cu">
+      <Filter>deep-learning-lib\v1\learner</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\info.cuh">
+      <Filter>deep-learning-lib\v1\device\gpu\cuda</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\prop.cu">
+      <Filter>deep-learning-lib\v1\device\gpu\cuda</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\prop.cuh">
+      <Filter>deep-learning-lib\v1\device\gpu\cuda</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\framework.cu">
+      <Filter>deep-learning-lib\v1\device\gpu\cuda</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\framework.cuh">
+      <Filter>deep-learning-lib\v1\device\gpu\cuda</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\info.cu">
+      <Filter>deep-learning-lib\v1\device\gpu\cuda</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dims.cuh">
+      <Filter>deep-learning-lib\v1\data</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\data\shared_memory.cuh">
+      <Filter>deep-learning-lib\v1\data</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dataset.cuh">
+      <Filter>deep-learning-lib\v1\data</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\data\datasets.cuh">
+      <Filter>deep-learning-lib\v1\data</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dims.cu">
+      <Filter>deep-learning-lib\v1\data</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dataset\dataset.cu">
+      <Filter>deep-learning-lib\v1\data\dataset</Filter>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dataset\datasets.cu">
+      <Filter>deep-learning-lib\v1\data\dataset</Filter>
+    </None>
+  </ItemGroup>
+</Project>

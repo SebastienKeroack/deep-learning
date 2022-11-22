@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-Adept|x64">
+      <Configuration>Debug-Adept</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{dc849f49-cfdd-472f-a191-7eb3417580dd}</ProjectGuid>
+    <RootNamespace>deeplearninglib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>COMPILE_DOUBLE;COMPILE_WINDOWS;BOOST_SPIRIT_X3_DEBUG;_DEBUG;_LIB;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>deep-learning-lib\pch.hpp</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\Program Files %28x86%29\Boost\boost_1_80_0;C:\Program Files %28x86%29\Eigen3\include\eigen3;C:\Program Files %28x86%29\FMT\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ConformanceMode>false</ConformanceMode>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\FMT\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>COMPILE_DOUBLE;COMPILE_WINDOWS;COMPILE_ADEPT;BOOST_SPIRIT_X3_DEBUG;ADEPT_RECORDING_PAUSABLE;_DEBUG;_LIB;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>deep-learning-lib\pch.hpp</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\Program Files %28x86%29\Adept\adept-2.1.1\include;C:\Program Files %28x86%29\Boost\boost_1_80_0;C:\Program Files %28x86%29\Eigen3\include\eigen3;C:\Program Files %28x86%29\FMT\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\FMT\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>COMPILE_FLOAT;COMPILE_WINDOWS;NDEBUG;_LIB;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>deep-learning-lib\pch.hpp</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\Program Files %28x86%29\Boost\boost_1_80_0;C:\Program Files %28x86%29\Eigen3\include\eigen3;C:\Program Files %28x86%29\FMT\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\FMT\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="deep-learning-lib\data\dataset.hpp" />
+    <ClInclude Include="deep-learning-lib\data\dataset\mnist.hpp" />
+    <ClInclude Include="deep-learning-lib\data\dtypes.hpp" />
+    <ClInclude Include="deep-learning-lib\data\enum\dialogbox.hpp" />
+    <ClInclude Include="deep-learning-lib\data\enum\env.hpp" />
+    <ClInclude Include="deep-learning-lib\data\enum\hierarchy.hpp" />
+    <ClInclude Include="deep-learning-lib\data\enum\loglevel.hpp" />
+    <ClInclude Include="deep-learning-lib\data\shape.hpp" />
+    <ClInclude Include="deep-learning-lib\data\string.hpp" />
+    <ClInclude Include="deep-learning-lib\data\time.hpp" />
+    <ClInclude Include="deep-learning-lib\device\system\info.hpp" />
+    <ClInclude Include="deep-learning-lib\device\system\shutdown_block.hpp" />
+    <ClInclude Include="deep-learning-lib\device\system\shutdown_block\shutdown_block_nux.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\device\system\shutdown_block\shutdown_block_win.hpp" />
+    <ClInclude Include="deep-learning-lib\drivers\driver.hpp" />
+    <ClInclude Include="deep-learning-lib\framework.hpp" />
+    <ClInclude Include="deep-learning-lib\io\file.hpp" />
+    <ClInclude Include="deep-learning-lib\io\flags.hpp" />
+    <ClInclude Include="deep-learning-lib\io\form\dialogbox.hpp" />
+    <ClInclude Include="deep-learning-lib\io\logger.hpp" />
+    <ClInclude Include="deep-learning-lib\io\term\command.hpp" />
+    <ClInclude Include="deep-learning-lib\io\term\input.hpp" />
+    <ClInclude Include="deep-learning-lib\io\term\keyboard.hpp" />
+    <ClInclude Include="deep-learning-lib\io\term\keyboard_nux.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="deep-learning-lib\io\term\keyboard_win.hpp" />
+    <ClInclude Include="deep-learning-lib\io\term\spinner.hpp" />
+    <ClInclude Include="deep-learning-lib\nn\learner.hpp" />
+    <ClInclude Include="deep-learning-lib\ops\distributions\distribution.hpp" />
+    <ClInclude Include="deep-learning-lib\ops\distributions\bernoulli.hpp" />
+    <ClInclude Include="deep-learning-lib\ops\distributions\gaussian.hpp" />
+    <ClInclude Include="deep-learning-lib\ops\distributions\integer.hpp" />
+    <ClInclude Include="deep-learning-lib\ops\distributions\real.hpp" />
+    <ClInclude Include="deep-learning-lib\ops\math.hpp" />
+    <ClInclude Include="deep-learning-lib\ops\modwt.hpp" />
+    <ClInclude Include="deep-learning-lib\ops\_math.hpp" />
+    <ClInclude Include="deep-learning-lib\pch.hpp" />
+    <ClInclude Include="deep-learning-lib\session.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\datasets.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\activation.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\dataset.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\group.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\hierarchy.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\hyperopt.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\initializer.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\layer.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\layer_activation.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\layer_dropout.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\layer_norm.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\loss_fn.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\model.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\optimizer.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\propagation.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\enum\while.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\data\scaler.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\learner\model.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\learner\models.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\mem\reallocate.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\mem\reallocate_c.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\ops\activations\functions.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\ops\while.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\optimizers\grid_search.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\optimizers\quickprop.hpp" />
+    <ClInclude Include="deep-learning-lib\v1\optimizers\sarprop.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="deep-learning-lib\data\dataset\dataset.cpp" />
+    <ClCompile Include="deep-learning-lib\data\dataset\mnist.cpp" />
+    <ClCompile Include="deep-learning-lib\data\shape.cpp" />
+    <ClCompile Include="deep-learning-lib\data\string.cpp" />
+    <ClCompile Include="deep-learning-lib\data\time\time.cpp" />
+    <ClCompile Include="deep-learning-lib\data\time\time_nux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\data\time\time_win.cpp" />
+    <ClCompile Include="deep-learning-lib\device\system\info\info.cpp" />
+    <ClCompile Include="deep-learning-lib\device\system\info\info_nux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\device\system\info\info_win.cpp" />
+    <ClCompile Include="deep-learning-lib\device\system\shutdown_block\shutdown_block_nux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\device\system\shutdown_block\shutdown_block_win.cpp" />
+    <ClCompile Include="deep-learning-lib\drivers\driver.cpp" />
+    <ClCompile Include="deep-learning-lib\io\file\file.cpp" />
+    <ClCompile Include="deep-learning-lib\io\file\file_nux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\file\file_win.cpp" />
+    <ClCompile Include="deep-learning-lib\io\form\dialogbox.cpp" />
+    <ClCompile Include="deep-learning-lib\io\form\dialogbox_nux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\form\dialogbox_win.cpp" />
+    <ClCompile Include="deep-learning-lib\io\logger.cpp" />
+    <ClCompile Include="deep-learning-lib\io\term\command_nux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\command_win.cpp" />
+    <ClCompile Include="deep-learning-lib\io\term\flags.cpp" />
+    <ClCompile Include="deep-learning-lib\io\term\input.cpp" />
+    <ClCompile Include="deep-learning-lib\io\term\keyboard_nux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\io\term\keyboard_win.cpp" />
+    <ClCompile Include="deep-learning-lib\io\term\spinner.cpp" />
+    <ClCompile Include="deep-learning-lib\nn\learner.cpp" />
+    <ClCompile Include="deep-learning-lib\ops\distributions\distribution.cpp" />
+    <ClCompile Include="deep-learning-lib\ops\distributions\bernoulli.cpp" />
+    <ClCompile Include="deep-learning-lib\ops\distributions\gaussian.cpp" />
+    <ClCompile Include="deep-learning-lib\ops\distributions\integer.cpp" />
+    <ClCompile Include="deep-learning-lib\ops\distributions\real.cpp" />
+    <ClCompile Include="deep-learning-lib\ops\math.cpp" />
+    <ClCompile Include="deep-learning-lib\ops\modwt.cpp" />
+    <ClCompile Include="deep-learning-lib\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\session.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\cross_val.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\cross_val_opt.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\dataset_v1.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\datasets.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\data\dataset\minibatch.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\data\scaler.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\allocate.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\assign_inputs.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\batch_normalization.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\batch_renormalization.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\bernoulli_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\bernoulli_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\bwp_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\bwp_rec_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\bwp_rec_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\bwp_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compile.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_error.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_error_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_error_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_grad.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_loss.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_loss_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_loss_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_r.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_r_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\compute_r_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\connections_init.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\connections_prepare.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\copy.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\deallocate.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\dropout.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\fwp_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\fwp_rec_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\fwp_rec_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\fwp_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\indexing.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\k_sparse.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\load.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\loss.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\merge.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\metrics.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\model.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\models.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\normalization.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\ordering.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\reallocate_batch.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\reallocate_parameters.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\reallocate_threads.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\save.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\tied_norm.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\tied_paramater.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\tied_weight.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\train.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\transfer_learning.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\update_derivative_fwp_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\update_derivative_fwp_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\update_derivative_rec_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\update_derivative_rec_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\update_size.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\user_controls.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\zoneout_mp.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\learner\zoneout_st.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\mem\reallocate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\mem\reallocate_c.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning-lib\v1\ops\constraints\clip_gradient.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\constraints\constraint.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\constraints\euclidean.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\constraints\max_norm.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\glorot.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\identity.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\lsuv.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\orthogonal.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\initializers\uniform.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\regularizers\l1.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\regularizers\l2.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\regularizers\srip.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\ops\regularizers\weight_decay.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\adabound.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\adam.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\amsbound.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\amsgrad.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\bayesian.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\gaussian_search.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\gradient_descent.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\gradient_descent_momentum.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\grid_search.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\hyperop.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\irprop_minus.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\irprop_plus.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\nesterov_accelerated_gradient.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\nosadam.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\quickprop.cpp" />
+    <ClCompile Include="deep-learning-lib\v1\optimizers\sarprop.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="deep-learning-lib\v1\data\dataset.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\data\datasets.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dataset\dataset.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dataset\datasets.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dims.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\data\dims.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\data\shared_memory.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\framework.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\framework.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\info.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\info.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\prop.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\device\gpu\cuda\prop.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\allocate.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\assign_inputs.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp_fc_to_fc.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp_fc_to_fc_batch_renorm.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp_fc_to_fc_batch_renorm_dropout.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\bwp_fc_to_fc_dropout.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_error.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_error_bce.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_error_bit_fail.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_error_standard.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_loss.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_loss_bce.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_loss_bit_fail.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\compute_loss_standard.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\copy.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\deallocate.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\dropout.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp_fc_to_fc.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp_fc_to_fc_batch_renorm.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp_fc_to_fc_batch_renorm_dropout.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\fwp_fc_to_fc_dropout.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\model.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\model.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\reallocate.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\train.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\update_derivative.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\update_derivative_fc.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\learner\update_derivative_fc_dropout.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\copy.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\reallocate.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\reallocate.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\reallocate_c.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\mem\reallocate_c.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\accumulate.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\accumulate.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\activations\functions.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\constraints\max_norm.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\distributions\curand.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\distributions\curand.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\distributions\shuffle.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\distributions\shuffle.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\fill.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\index.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\mask.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\mask.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\math.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\multiply.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\multiply.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\reduce.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\reduce.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\regularizers\l1.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\regularizers\l2.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\transpose.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\transpose.cuh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\ops\zero.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\adam.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\amsgrad.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\gradient_descent.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\gradient_descent_momentum.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\irprop_plus.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="deep-learning-lib\v1\optimizers\nesterov_accelerated_gradient.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-Adept|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "deep-learning-run-win", "deep-learning-run\deep-learning-run-win.vcxproj", "{9614610F-9CBF-440C-A94A-CA572597DAC6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "deep-learning-lib-win", "deep-learning-lib\deep-learning-lib-win.vcxproj", "{DC849F49-CFDD-472F-A191-7EB3417580DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "deep-learning-test-win", "deep-learning-test\deep-learning-test-win.vcxproj", "{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug-Adept|x64 = Debug-Adept|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9614610F-9CBF-440C-A94A-CA572597DAC6}.Debug|x64.ActiveCfg = Debug|x64
+		{9614610F-9CBF-440C-A94A-CA572597DAC6}.Debug|x64.Build.0 = Debug|x64
+		{9614610F-9CBF-440C-A94A-CA572597DAC6}.Debug-Adept|x64.ActiveCfg = Debug-Adept|x64
+		{9614610F-9CBF-440C-A94A-CA572597DAC6}.Debug-Adept|x64.Build.0 = Debug-Adept|x64
+		{9614610F-9CBF-440C-A94A-CA572597DAC6}.Release|x64.ActiveCfg = Release|x64
+		{9614610F-9CBF-440C-A94A-CA572597DAC6}.Release|x64.Build.0 = Release|x64
+		{DC849F49-CFDD-472F-A191-7EB3417580DD}.Debug|x64.ActiveCfg = Debug|x64
+		{DC849F49-CFDD-472F-A191-7EB3417580DD}.Debug|x64.Build.0 = Debug|x64
+		{DC849F49-CFDD-472F-A191-7EB3417580DD}.Debug-Adept|x64.ActiveCfg = Debug-Adept|x64
+		{DC849F49-CFDD-472F-A191-7EB3417580DD}.Debug-Adept|x64.Build.0 = Debug-Adept|x64
+		{DC849F49-CFDD-472F-A191-7EB3417580DD}.Release|x64.ActiveCfg = Release|x64
+		{DC849F49-CFDD-472F-A191-7EB3417580DD}.Release|x64.Build.0 = Release|x64
+		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Debug|x64.ActiveCfg = Debug|x64
+		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Debug|x64.Build.0 = Debug|x64
+		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Debug-Adept|x64.ActiveCfg = Debug-Adept|x64
+		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Debug-Adept|x64.Build.0 = Debug-Adept|x64
+		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Release|x64.ActiveCfg = Release|x64
+		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C460A192-0925-48DF-AD2B-7EE5CB08A921}
+	EndGlobalSection
+EndGlobal
