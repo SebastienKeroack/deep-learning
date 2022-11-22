@@ -33,7 +33,6 @@ Global
 		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Debug-Adept|x64.ActiveCfg = Debug-Adept|x64
 		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Debug-Adept|x64.Build.0 = Debug-Adept|x64
 		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Release|x64.ActiveCfg = Release|x64
-		{F14A430B-C42C-49DF-BA36-5A7EA5B542BC}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
