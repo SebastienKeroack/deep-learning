@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <!-- From: lib\version.hpp -->
+    <PV_MAJOR>0</PV_MAJOR>
+    <PV_MINOR>2</PV_MINOR>
+    <!-- Windows user path -->
+    <AdeptIncludeDir_WIN>C:\Program Files %28x86%29\Adept\adept-2.1.1\include</AdeptIncludeDir_WIN>
+    <BoostIncludeDir_WIN>C:\Program Files %28x86%29\Boost\boost_1_80_0</BoostIncludeDir_WIN>
+    <EigenIncludeDir_WIN>C:\Program Files %28x86%29\Eigen3\include</EigenIncludeDir_WIN>
+    <FmtIncludeDir_WIN>C:\Program Files %28x86%29\FMT\include</FmtIncludeDir_WIN>
+    <FmtLibraryDir_WIN>C:\Program Files %28x86%29\FMT\lib</FmtLibraryDir_WIN>
+    <!-- Linux user path -->
+    <OpenmpIncludeDir_NUX>/usr/lib/llvm-10/include/openmp</OpenmpIncludeDir_NUX>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup />
+</Project>

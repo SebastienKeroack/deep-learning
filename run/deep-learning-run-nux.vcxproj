@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)project.props" />
+  <PropertyGroup Label="Globals">
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <IntDir>$(SolutionDir).build\run\obj-nux\$(Platform)\$(Configuration)\</IntDir>
+    <Keyword>Linux</Keyword>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <OutDir>$(SolutionDir).build\$(Platform)\$(Configuration)\</OutDir>
+    <ProjectGuid>{2ac18aab-9df5-48b0-9c57-21c9a6a06d32}</ProjectGuid>
+    <RemoteCppCompileToolExe>clang++-15</RemoteCppCompileToolExe>
+    <RemoteDeployDir>$(RemoteRootDir)/$(RemoteProjectRelDir)</RemoteDeployDir>
+    <RemoteIntRelDir>deep-learning/.build/run/obj/$(Platform)/$(Configuration)</RemoteIntRelDir>
+    <RemoteLdToolExe>clang++-15</RemoteLdToolExe>
+    <RemoteOutRelDir>deep-learning/.build/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <RemoteProjectRelDir>deep-learning/run</RemoteProjectRelDir>
+    <RootNamespace>DEEP_LEARNING_RUN</RootNamespace>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <TargetName>deep-learning_$(PV_MAJOR)-$(PV_MINOR)_$(Platform)</TargetName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Label="Globals">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)lib;$(RemoteRootDir)/deep-learning;$(RemoteRootDir)/deep-learning/lib;$(OpenmpIncludeDir_NUX);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++20</CppLanguageStandard>
+      <PreprocessorDefinitions>UNICODE;X64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-fopenmp=libiomp5 %(AdditionalOptions)</AdditionalOptions>
+      <LibraryDependencies>systemd;%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>PowerShell -File "$(SolutionDir)tools\increment_build_rev_ver.ps1" "$(SolutionDir)run\version.hpp" FV</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>adept;fmtd;%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>-march=native %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>fmt;%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="deep-learning\mnist.cpp" />
+    <ClCompile Include="deep-learning\v1\custom.cpp" />
+    <ClCompile Include="deep-learning\v1\fx_simulator.cpp" />
+    <ClCompile Include="deep-learning\v1\grid_search_opt.cpp" />
+    <ClCompile Include="deep-learning\v1\optimize.cpp" />
+    <ClCompile Include="deep-learning\v1\pre_training.cpp" />
+    <ClCompile Include="deep-learning\v1\sae_lstm.cpp" />
+    <ClCompile Include="deep-learning\v1\transfer_learning.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deep-learning\mnist.hpp" />
+    <ClInclude Include="deep-learning\v1\custom.hpp" />
+    <ClInclude Include="version.hpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\deep-learning-nux.vcxproj">
+      <Project>{b3a83735-e6a0-4a5a-a928-d9664a72e395}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
