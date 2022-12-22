@@ -1255,7 +1255,7 @@ bool Grid_Search::optimize(Models &models) {
     }
 #endif
 
-    if (tmp_ptr_Neural_Network_trainer->Update(
+    if (tmp_ptr_Neural_Network_trainer->update(
             *tmp_ptr_Neural_Network_trainer_clone, true) == false) {
       ERR(L"An error has been triggered from the `Update(*ptr, "
           L"true)` function.");

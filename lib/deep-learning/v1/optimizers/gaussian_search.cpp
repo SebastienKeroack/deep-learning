@@ -408,9 +408,9 @@ bool Gaussian_Search::Update__Population(
 
         return false;
       }
-    } else if (indi->Update(
+    } else if (indi->update(
                    *ptr_source_Dataset_Manager_received, true, true) == false) {
-      ERR(L"An error has been triggered from the `Update(ptr, "
+      ERR(L"An error has been triggered from the `update(ptr, "
           L"true, true)` function.");
 
       return false;
@@ -677,11 +677,11 @@ bool Gaussian_Search::Evaluation(void) {
   }
 
   if (best_model_info.first != 0 &&
-      this->individuals[0]->Update(
+      this->individuals[0]->update(
           *this->individuals[best_model_info.first], true,
           true) == false) {
     ERR(L"An error has been triggered from the "
-        L"`Update(ptr[%d], true, true)` function.",
+        L"`update(ptr[%d], true, true)` function.",
         best_model_info.first);
 
     return false;
@@ -741,11 +741,11 @@ bool Gaussian_Search::Evaluation__Loop(Datasets *const datasets) {
   }
 
   if (k_best != 0_UZ &&
-      this->individuals[0]->Update(
+      this->individuals[0]->update(
           *this->individuals[k_best], true,
           true) == false) {
     ERR(L"An error has been triggered from the "
-        L"`Update(ptr[%zu], true, true)` function.",
+        L"`update(ptr[%zu], true, true)` function.",
         k_best);
 
     return false;
@@ -850,10 +850,10 @@ bool Gaussian_Search::Evaluation__OpenMP(Datasets *const datasets) {
   }
 
   if (tmp_best_individual_index__int != 0 &&
-      this->individuals[0]->Update(
+      this->individuals[0]->update(
           *this->individuals[tmp_best_individual_index__int],
           true, true) == false) {
-    ERR(L"An error has been triggered from the `Update(ptr[%d], "
+    ERR(L"An error has been triggered from the `update(ptr[%d], "
         L"true, true)` function.",
         tmp_best_individual_index__int);
 

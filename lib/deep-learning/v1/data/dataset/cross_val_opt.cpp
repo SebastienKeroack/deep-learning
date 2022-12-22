@@ -51,7 +51,7 @@ CrossValOpt::CrossValOpt(void) : CrossVal(), HyperOpt() {
 
       return false;
   }
-  else if(this->Update(model) == false)
+  else if(this->update(model) == false)
   {
       ERR(L"An error has been triggered from the
   \"Update(ptr)\" function.",);
@@ -187,7 +187,7 @@ CrossValOpt::CrossValOpt(void) : CrossVal(), HyperOpt() {
 
       return false;
   }
-  else if(this->Update(model) == false)
+  else if(this->update(model) == false)
   {
       ERR(L"An error has been triggered from the
   \"Update(ptr)\" function.",);

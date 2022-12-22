@@ -162,6 +162,32 @@ bool parse_from_file(std::wifstream &file, std::wstring const &discard,
 }
 
 template <typename T>
+bool parse_real(std::wifstream &file, T &out) {
+  // Parse real value from the file.
+  file >> out;
+
+  // If the previous line failed,
+  //  it means it probably encountered "inf" as a value.
+  if (file.fail()) {
+    std::wstring l;
+    file.clear();
+    file >> l;
+    
+    if (file.fail()) {
+      ERR(L"Can not read properly from the file.");
+      return false;
+    } else if (l.find(L"inf") == std::wstring::npos) {
+      ERR(L"Can not find `inf` in `%ls`.", l.c_str());
+      return false;
+    }
+    
+    out = HUGE_VAL;
+  }
+
+  return true;
+}
+
+template <typename T>
 bool parse_number(wchar_t *&char_it, wchar_t *const last_char, T &output) {
   auto assigner([&output](auto &ctx) { output = _attr(ctx); });
 
@@ -401,4 +427,5 @@ template bool DL::File::iopen<std::wifstream>(std::wifstream &, std::wstring con
 template bool DL::File::read_stream_block_n_parse<size_t>(wchar_t *&, wchar_t *&, size_t &, size_t const, size_t const, size_t &, std::vector<wchar_t> &, std::wifstream &, wchar_t const);
 template bool DL::File::read_stream_block_n_parse<double>(wchar_t *&, wchar_t *&, size_t &, size_t const, size_t const, double &, std::vector<wchar_t> &, std::wifstream &, wchar_t const);
 template bool DL::File::parse_from_file<std::wstring>(std::wifstream &, std::wstring const &, std::wstring &);
+template bool DL::File::parse_real<double>(std::wifstream &, double &);
 // clang-format on

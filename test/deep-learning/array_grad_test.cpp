@@ -1,4 +1,4 @@
-ï»¿/* Copyright 2022 SÃ©bastien KÃ©roack. All Rights Reserved.
+/* Copyright 2022 Sébastien Kéroack. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -13,20 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-#pragma once
+// PCH:
+#include "test/pch.hpp"
 
-#include "../lib/version.hpp"
-
-#define FV_MAJOR PV_MAJOR
-#define FV_MINOR PV_MINOR
-#define FV_BUILD 22355
-#define FV_REV 1
-
-#define FILE_VER_STRING \
-  STR(FV_MAJOR) "." \
-  STR(FV_MINOR) "." \
-  STR(FV_BUILD) "." \
-  STR(FV_REV)
-
-#define ORIGINAL_FILE_NAME \
-  "test_" STR(FV_MAJOR) "-" STR(FV_MINOR) "_x64.exe"
+namespace DL {
+TEST(ArrayGradTest, Foo) { EXPECT_EQ(true, true); }
+}  // namespace DL

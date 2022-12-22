@@ -607,15 +607,15 @@ bool Datasets::User_Controls__Optimization(Model *&trainer, Model *&trained) {
         break;
       case 2:
         if (accept(L"Transfer to trained: ")) {
-          if (trained->Update(*trainer, true) == false) {
+          if (trained->update(*trainer, true) == false) {
             ERR(L"An error has been triggered from the "
-                "`Update(ptr, true)` function.");
+                "`update(ptr, true)` function.");
             return false;
           }
         } else if (accept(L"Transfer to trainer: ")) {
-          if (trainer->Update(*trained, true) == false) {
+          if (trainer->update(*trained, true) == false) {
             ERR(L"An error has been triggered from the "
-                L"`Update(ptr, true)` function.");
+                L"`update(ptr, true)` function.");
             return false;
           }
         }
@@ -829,9 +829,9 @@ void Datasets::optimize(WhileCond const &while_cond, bool const save_trainer,
       if (this->_type_evaluation != ENV::TESTG)
         this->Optimization__Testing(false, time_str, time_end, trainer);
 
-      if (trained->Update(*trainer, true) == false)
+      if (trained->update(*trainer, true) == false)
         ERR(L"An error has been triggered from the "
-            L"`Update(ptr, true)` function.");
+            L"`update(ptr, true)` function.");
     }
     // |END| Compare. |END|
 

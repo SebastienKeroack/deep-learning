@@ -13,20 +13,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+//
+// pch.hpp
+//
+
 #pragma once
 
-#include "../lib/version.hpp"
+// Framework:
+#include "framework.hpp"
 
-#define FV_MAJOR PV_MAJOR
-#define FV_MINOR PV_MINOR
-#define FV_BUILD 22355
-#define FV_REV 1
-
-#define FILE_VER_STRING \
-  STR(FV_MAJOR) "." \
-  STR(FV_MINOR) "." \
-  STR(FV_BUILD) "." \
-  STR(FV_REV)
-
-#define ORIGINAL_FILE_NAME \
-  "test_" STR(FV_MAJOR) "-" STR(FV_MINOR) "_x64.exe"
+// Deep learning:
+#include "deep-learning/data/dtypes.hpp"

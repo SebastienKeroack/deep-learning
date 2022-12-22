@@ -201,7 +201,16 @@
     <ClInclude Include="deep-learning\io\term\spinner.hpp">
       <Filter>deep-learning\io\term</Filter>
     </ClInclude>
+    <ClInclude Include="deep-learning\nn\checkpoint.hpp">
+      <Filter>deep-learning\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning\nn\checkpointer.hpp">
+      <Filter>deep-learning\nn</Filter>
+    </ClInclude>
     <ClInclude Include="deep-learning\nn\learner.hpp">
+      <Filter>deep-learning\nn</Filter>
+    </ClInclude>
+    <ClInclude Include="deep-learning\nn\var.hpp">
       <Filter>deep-learning\nn</Filter>
     </ClInclude>
     <ClInclude Include="deep-learning\ops\_math.hpp">
@@ -396,7 +405,16 @@
     <ClCompile Include="deep-learning\io\term\spinner.cpp">
       <Filter>deep-learning\io\term</Filter>
     </ClCompile>
+    <ClCompile Include="deep-learning\nn\checkpoint.cpp">
+      <Filter>deep-learning\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning\nn\checkpointer.cpp">
+      <Filter>deep-learning\nn</Filter>
+    </ClCompile>
     <ClCompile Include="deep-learning\nn\learner.cpp">
+      <Filter>deep-learning\nn</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning\nn\var.cpp">
       <Filter>deep-learning\nn</Filter>
     </ClCompile>
     <ClCompile Include="deep-learning\ops\distributions\bernoulli.cpp">

@@ -2024,7 +2024,7 @@ __host__ __device__ bool cuDevicesProp::push_back(
     if (this->_ptr_array_Class_Device_Information[this->_number_cuda_devices]
             .Initialize(index_device_received,
                         ptr_struct_cudaDeviceProp_received)) {
-      this->Update(ptr_struct_cudaDeviceProp_received);
+      this->update(ptr_struct_cudaDeviceProp_received);
     }
 
     this->_selected_cuda_device = this->_number_cuda_devices;
@@ -2040,7 +2040,7 @@ __global__ void kernel__Class_Device_Information_Array__Refresh(
     struct cudaDeviceProp *const ptr_struct_cudaDeviceProp_received,
     class cuDevicesProp
         *const ptr_Class_Device_Information_Array_received) {
-  ptr_Class_Device_Information_Array_received->Update(
+  ptr_Class_Device_Information_Array_received->update(
       ptr_struct_cudaDeviceProp_received);
 }
 

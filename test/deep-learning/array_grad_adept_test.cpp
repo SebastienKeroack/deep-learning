@@ -17,17 +17,12 @@ limitations under the License.
 #include "test/pch.hpp"
 
 // Deep learning:
-#include "deep-learning/io/logger.hpp"
 #include "deep-learning/ops/math.hpp"
-#include "deep-learning/v1/ops/activations/functions.hpp"
-
-// Standard:
-#include <iostream>
 
 using namespace DL::Math;
 
 namespace DL {
-TEST(ADEPT, Dense3x1SigmoidLinearLoss) {
+TEST(ArrayGradAdeptTest, Dense3x1SigmoidLinearLoss) {
   adept::Stack stack;
 
   var X[3] = {0.5_r, 0.5_r, 0.5_r};
@@ -88,7 +83,7 @@ TEST(ADEPT, Dense3x1SigmoidLinearLoss) {
   ASSERT_DOUBLE_EQ(dB[0], B[0].get_gradient());
 }
 
-TEST(ADEPT, Dense3x1SigmoidMSELoss) {
+TEST(ArrayGradAdeptTest, Dense3x1SigmoidMSELoss) {
   adept::Stack stack;
 
   var X[3] = {0.5_r, 0.5_r, 0.5_r};
@@ -151,7 +146,7 @@ TEST(ADEPT, Dense3x1SigmoidMSELoss) {
   ASSERT_DOUBLE_EQ(dB[0], B[0].get_gradient());
 }
 
-TEST(ADEPT, Dense1x3SoftmaxCCELoss) {
+TEST(ArrayGradAdeptTest, Dense1x3SoftmaxCCELoss) {
   adept::Stack stack;
 
   var X[1] = {0.5_r};
@@ -241,7 +236,7 @@ TEST(ADEPT, Dense1x3SoftmaxCCELoss) {
   }
 }
 
-TEST(ADEPT, Dense1x3SoftmaxMSELoss) {
+TEST(ArrayGradAdeptTest, Dense1x3SoftmaxMSELoss) {
   adept::Stack stack;
 
   var X[1] = {0.5_r};

@@ -1167,9 +1167,9 @@ bool Models::compare_trained(void) {
       this->_ptr_competitor_Neural_Network));
 
   if (tmp_updated) {
-    if (this->_ptr_trained_Neural_Network->Update(
+    if (this->_ptr_trained_Neural_Network->update(
             *this->_ptr_competitor_Neural_Network, true) == false) {
-      ERR(L"An error has been triggered from the `Update()` function.");
+      ERR(L"An error has been triggered from the `update()` function.");
       return false;
     }
 
@@ -1235,9 +1235,9 @@ bool Models::compare_trained_pre_train(void) {
   }
 
   if (tmp_updated) {
-    if (this->_ptr_trained_Neural_Network->Update(
+    if (this->_ptr_trained_Neural_Network->update(
             *this->_ptr_competitor_Neural_Network, true) == false) {
-      ERR(L"An error has been triggered from the `Update()` function.");
+      ERR(L"An error has been triggered from the `update()` function.");
       return false;
     }
 
@@ -1320,9 +1320,9 @@ bool Models::pre_training(void) {
     // If is not the first pre-training level. Train the neural network based on
     // the previously best parameters found.
     if (tmp_pre_training_level != 1_UZ &&
-        this->_ptr_trainer_Neural_Network->Update(
+        this->_ptr_trainer_Neural_Network->update(
             *this->_ptr_competitor_Neural_Network, true) == false) {
-      ERR(L"An error has been triggered from the `Update()` function.");
+      ERR(L"An error has been triggered from the `update()` function.");
       return false;
     }
 
@@ -1420,9 +1420,9 @@ bool Models::pre_training(
     // If is not the first pre-training level. Train the neural network based on
     // the previously best parameters found.
     if (tmp_pre_training_level != 1_UZ &&
-        this->_ptr_trainer_Neural_Network->Update(
+        this->_ptr_trainer_Neural_Network->update(
             *this->_ptr_competitor_Neural_Network, true) == false) {
-      ERR(L"An error has been triggered from the `Update()` function.");
+      ERR(L"An error has been triggered from the `update()` function.");
       return false;
     }
 

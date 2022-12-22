@@ -570,7 +570,7 @@ ref_source_Neural_Network_received.Copy__Batch_Normalization_Neurons__Device_To_
   return true;
 }
 
-bool Model::Update(Model const &ref_source_Neural_Network_received,
+bool Model::update(Model const &ref_source_Neural_Network_received,
                    bool const initialize_parallel_computation_received,
                    bool const update_delta_optimizer_received) {
   // Lambda: Redirect to copy.

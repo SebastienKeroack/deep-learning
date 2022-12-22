@@ -13,16 +13,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-// Framework:
-#include "framework.hpp"
-
-// Adept source (include only once in the program):
-#if defined(_WIN32) && DEEPLEARNING_USE_ADEPT
-#pragma warning(push)
-#pragma warning(disable : 4244)
-#include <adept_source.h>
-#pragma warning(pop)
-#endif
+// PCH:
+#include "run/pch.hpp"
 
 // Project headers:
 #include "run/deep-learning/mnist.hpp"

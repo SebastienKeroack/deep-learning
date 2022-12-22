@@ -47,6 +47,8 @@
       <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)lib;$(EigenIncludeDir_WIN);$(FmtIncludeDir_WIN);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>run/pch.hpp</PrecompiledHeaderFile>
       <PreprocessorDefinitions>_CONSOLE;WIN32;WIN64;X64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <WarningLevel>Level3</WarningLevel>
@@ -82,17 +84,33 @@
   <ItemGroup>
     <ClCompile Include="deep-learning\mnist.cpp" />
     <ClCompile Include="deep-learning\v1\custom.cpp" />
-    <ClCompile Include="deep-learning\v1\fx_simulator.cpp" />
-    <ClCompile Include="deep-learning\v1\grid_search_opt.cpp" />
-    <ClCompile Include="deep-learning\v1\optimize.cpp" />
-    <ClCompile Include="deep-learning\v1\pre_training.cpp" />
-    <ClCompile Include="deep-learning\v1\sae_lstm.cpp" />
-    <ClCompile Include="deep-learning\v1\transfer_learning.cpp" />
+    <ClCompile Include="deep-learning\v1\fx_simulator.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning\v1\grid_search_opt.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning\v1\optimize.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning\v1\pre_training.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning\v1\sae_lstm.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deep-learning\v1\transfer_learning.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deep-learning\mnist.hpp" />
     <ClInclude Include="deep-learning\v1\custom.hpp" />
+    <ClInclude Include="pch.hpp" />
     <ClInclude Include="version.hpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClInclude>

@@ -13,6 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+// PCH:
+#include "run/pch.hpp"
+
 // File header:
 #include "run/deep-learning/mnist.hpp"
 
@@ -36,6 +39,7 @@ constexpr size_t ALLOWABLE_MODEL_BYTES = 512_UZ * ::MEGABYTE;
 
 class MNISTLearner : public Learner {
  protected:
+  /* ~97.7% ACC */
   void _create_model(void) {
     std::vector<int> N_units = {128};
 

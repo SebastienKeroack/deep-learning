@@ -34,6 +34,7 @@
       <Filter>deep-learning\v1</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deep-learning\mnist.hpp">
@@ -42,6 +43,7 @@
     <ClInclude Include="deep-learning\v1\custom.hpp">
       <Filter>deep-learning\v1</Filter>
     </ClInclude>
+    <ClInclude Include="pch.hpp" />
     <ClInclude Include="version.hpp" />
   </ItemGroup>
 </Project>

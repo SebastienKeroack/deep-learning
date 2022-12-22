@@ -6,7 +6,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="deep-learning\adept_simple_test.cpp">
+    <ClCompile Include="deep-learning\array_grad_adept_test.cpp">
+      <Filter>deep-learning</Filter>
+    </ClCompile>
+    <ClCompile Include="deep-learning\array_grad_test.cpp">
       <Filter>deep-learning</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp" />

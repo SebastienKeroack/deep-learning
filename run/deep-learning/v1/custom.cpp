@@ -13,6 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+// PCH:
+#include "run/pch.hpp"
+
 // File header:
 #include "run/deep-learning/v1/custom.hpp"
 

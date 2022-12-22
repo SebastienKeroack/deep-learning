@@ -23,8 +23,8 @@ limitations under the License.
 
 #define PV_MAJOR 0
 #define PV_MINOR 2
-#define PV_BUILD 22347
-#define PV_REV 1
+#define PV_BUILD 22355
+#define PV_REV 2
 
 #define PRODUCT_VER_STRING \
   STR(PV_MAJOR) "." \

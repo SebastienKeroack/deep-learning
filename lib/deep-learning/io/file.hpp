@@ -45,6 +45,9 @@ bool iopen(IFSTREAM &file, std::wstring const &path_name,
 template <typename T>
 bool parse_from_file(std::wifstream &file, std::wstring const &discard, T &out);
 
+template <typename T>
+bool parse_real(std::wifstream &file, T &out);
+
 bool path_exist(std::wstring const &path_name);
 
 template <typename T>

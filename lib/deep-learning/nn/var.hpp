@@ -1,4 +1,4 @@
-﻿/* Copyright 2022 Sébastien Kéroack. All Rights Reserved.
+/* Copyright 2022 Sébastien Kéroack. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -15,18 +15,22 @@ limitations under the License.
 
 #pragma once
 
-#include "../lib/version.hpp"
+// Standard:
+#include <string>
 
-#define FV_MAJOR PV_MAJOR
-#define FV_MINOR PV_MINOR
-#define FV_BUILD 22355
-#define FV_REV 1
+namespace DL {
+template <typename T>
+class Var {
+ public:
+  Var(std::wstring const &name, T const initial, std::wstring const &workdir,
+      bool const load);
 
-#define FILE_VER_STRING \
-  STR(FV_MAJOR) "." \
-  STR(FV_MINOR) "." \
-  STR(FV_BUILD) "." \
-  STR(FV_REV)
+  bool load(void);
+  bool save(void);
 
-#define ORIGINAL_FILE_NAME \
-  "test_" STR(FV_MAJOR) "-" STR(FV_MINOR) "_x64.exe"
+  T value;
+
+ private:
+  std::wstring path_name;
+};
+}  // namespace DL

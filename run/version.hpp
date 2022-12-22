@@ -19,8 +19,8 @@ limitations under the License.
 
 #define FV_MAJOR PV_MAJOR
 #define FV_MINOR PV_MINOR
-#define FV_BUILD 22347
-#define FV_REV 1
+#define FV_BUILD 22355
+#define FV_REV 2
 
 #define FILE_VER_STRING \
   STR(FV_MAJOR) "." \

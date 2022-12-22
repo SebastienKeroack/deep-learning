@@ -26,7 +26,7 @@ Nightly | [main](https://github.com/SebastienKeroack/deep-learning)  | 2.1.1 | 1
 Follow the directives below to be able to build the main branch:
 ```shell
 $ sudo apt update
-$ sudo apt install build-essential cmake libsystemd-dev
+$ sudo apt install build-essential cmake libsystemd-dev pkg-config
 ```
 
 Install __Boost__:

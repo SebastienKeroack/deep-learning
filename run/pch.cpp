@@ -13,20 +13,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-#pragma once
+//
+// pch.cpp
+//
 
-#include "../lib/version.hpp"
+// PCH:
+#include "run/pch.hpp"
 
-#define FV_MAJOR PV_MAJOR
-#define FV_MINOR PV_MINOR
-#define FV_BUILD 22355
-#define FV_REV 1
-
-#define FILE_VER_STRING \
-  STR(FV_MAJOR) "." \
-  STR(FV_MINOR) "." \
-  STR(FV_BUILD) "." \
-  STR(FV_REV)
-
-#define ORIGINAL_FILE_NAME \
-  "test_" STR(FV_MAJOR) "-" STR(FV_MINOR) "_x64.exe"
+#if defined(_WIN32) && DEEPLEARNING_USE_ADEPT
+#pragma warning(push)
+#pragma warning(disable : 4244)
+#include <adept_source.h>
+#pragma warning(pop)
+#endif

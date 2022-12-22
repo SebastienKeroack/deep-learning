@@ -2508,7 +2508,7 @@ class Model {
             bool const initialize_parallel_computation_received = true,
             bool const copy_delta_optimizer_received = false,
             size_t const allowable_memory = 0_UZ);
-  bool Update(Model const &ref_source_Neural_Network_received,
+  bool update(Model const &ref_source_Neural_Network_received,
               bool const initialize_parallel_computation_received = false,
               bool const update_delta_optimizer_received = false);
   bool Assign__Layers(Layer_Parameters const *const ptr_array_layers_received);
