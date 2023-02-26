@@ -1,6 +1,6 @@
 ﻿# Deep Learning: implementations of various advances made in the field of deep learning.
 
-A repository created in 2016, containing the implementations of various advances made in the field of deep learning. All implementations are based on information provided by their authors before mid-2019. Maybe subject to some errors. The repository has been inactive between mid-2019 and November 2022
+A library created in 2016, containing the implementations of various advances made in the field of deep learning. All implementations are based on research papers published before mid-2019. Technical information is based on an open access repository of electronic preprints and postprints. The repository has been inactive between mid-2019 and November 2022
 
 Files inside the v1 directory/namespace are considered unintuitive/unfriendly and unstandardized.  
 Otherwise, code outside the directory is written to be easier to understand from November 2022 onwards.
